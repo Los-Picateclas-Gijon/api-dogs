@@ -20,7 +20,11 @@ class UpdateTest extends TestCase
         //Given
         $dogs = Dog::factory()->count(2)->create();
         //When
-
+        
+        $response = $this->json('GET', '/api/dogs');
+        
         //Then
+        $response->assertStatus(200);
+    
     }
 }
