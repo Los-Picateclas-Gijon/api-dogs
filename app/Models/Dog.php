@@ -9,8 +9,7 @@ class Dog extends Model
 {
     use HasFactory;
 
-    protected static $dog = [
-        'id',
+    protected $fillable = [
         'name',
         'image',
     ];
