@@ -19,6 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/api/dogs', function () {
+Route::get('/dogs', function () {
     return Dog::all();
 });
+
+//put  /dogs/id
