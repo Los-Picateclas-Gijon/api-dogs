@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Dog;
+use App\Http\Controllers\DogApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/dogs', function () {
-    return Dog::all();
-});
+// Route::get('/dogs', function () {
+//     return Dog::all();
+// });
 
-//put  /dogs/id
+Route::put('/dogs/{id}', [DogApiController::class, 'update']);

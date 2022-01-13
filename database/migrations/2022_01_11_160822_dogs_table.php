@@ -14,11 +14,11 @@ class DogsTable extends Migration
     public function up()
     {
         Schema::create('dogs', function (Blueprint $table){
-        $table->id();
-        $table->string('name');
-        $table->string('image');
-        $table->timestamp('updated_at');
-        $table->timestamp('created_at');
+            $table->id();
+            $table->string('name');
+            $table->string('image');
+            
+            $table->timestamp('created_at');
         });
     }
 
