@@ -10,6 +10,7 @@ use Tests\TestCase;
 
 class DogApiTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -27,9 +28,13 @@ class DogApiTest extends TestCase
         //$dog=Dog::first();
         $response=$this->deletejson('/api/dogs/1');
        
-        $response->assertStatus(200);
-                // ->assertSuccessful()
+        $response->assertStatus(200)
+                 ->assertSuccessful();
                 // ->assertJsonCount(1);
                  
     }
+
+  
+
 }
+

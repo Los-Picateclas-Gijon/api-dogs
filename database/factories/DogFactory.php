@@ -14,7 +14,7 @@ class DogFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> $this->fake->name(),
+            'name'=> $this->faker->name(),
             'image'=>'https://loremflickr.com/680/480/dog'
             
         ];

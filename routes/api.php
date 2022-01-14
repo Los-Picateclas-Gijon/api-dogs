@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::delete('/dogs/{id}',[DogApiController::class,'destroy']);
 
+
 // App\Http\Controllers\DogApiController@destroy 
 // [DogApiController::class,'destroy']
