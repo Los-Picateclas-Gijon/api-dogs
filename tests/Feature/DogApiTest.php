@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class DogApiTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -21,9 +22,10 @@ class DogApiTest extends TestCase
             'image'=>'new url'
         ];
         $response = $this->json('POST','/api/dogs',$data);
-        $response->assertStatus(201)
-            ->assertJson(['created' => true,])
-            ->assertJsonStructure(['error']);
+        $response->assertStatus(200)
+            ->assertSuccessful();
+
+            
     }
 
 }
