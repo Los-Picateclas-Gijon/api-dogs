@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/dogs',[DogApiController::class, 'index']);
+Route::put('/dogs/{id}', [DogApiController::class, 'update']);
+
