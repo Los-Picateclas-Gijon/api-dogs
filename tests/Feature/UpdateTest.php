@@ -42,5 +42,6 @@ class UpdateTest extends TestCase
 
         //Then
         $response->assertStatus(200);
+                // ->assertJsonFragment(['image' => 'newUrl']);
     }
 }

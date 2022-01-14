@@ -25,7 +25,6 @@ class DogApiController extends Controller
     public function update(Request $request, $id)
     {
         $dog = Dog::where('id', $id)->update($request->all());
-
         return response()->json($dog, 200);
     }
 }    
