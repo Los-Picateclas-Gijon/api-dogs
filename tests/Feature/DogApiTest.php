@@ -30,8 +30,8 @@ class DogApiTest extends TestCase
        
         $response->assertStatus(200)
                  ->assertSuccessful();
-                // ->assertJsonCount(1);
-                 
+               
+                
     }
 
   
