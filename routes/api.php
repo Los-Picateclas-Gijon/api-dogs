@@ -24,3 +24,4 @@ Route::delete('/dogs/{id}',[DogApiController::class,'destroy']);
 
 // App\Http\Controllers\DogApiController@destroy 
 // [DogApiController::class,'destroy']
+Route::get('/dogs',[DogApiController::class, 'index']);

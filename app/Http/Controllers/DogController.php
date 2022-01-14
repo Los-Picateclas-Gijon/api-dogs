@@ -81,6 +81,6 @@ class DogController extends Controller
      */
     public function destroy(Dog $dog)
     {
-      
+        //
     }
 }

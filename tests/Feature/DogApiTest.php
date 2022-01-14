@@ -36,5 +36,16 @@ class DogApiTest extends TestCase
 
   
 
-}
 
+
+    public function test_index()
+    {  $dogs = Dog::factory()->count(2)->create();
+       // $this->assertTrue($response['index']);
+       $response = $this->json('GET','/api/dogs');
+       $response->assertStatus(200)
+        ->assertJsonCount(2)
+        ->assertExactJson($dogs->toArray());
+       
+     }
+}
+   

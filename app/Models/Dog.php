@@ -10,7 +10,7 @@ class Dog extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'image'
+        'image',
         
     ];
 }
