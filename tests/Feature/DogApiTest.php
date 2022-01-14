@@ -23,13 +23,13 @@ class DogApiTest extends TestCase
     }
 
     public function test_destroy(){
-        $user=Dog::factory()->count(1)->make();
-        $user=Dog::first();
-        //$user=$this->json('DELETE','/api/dogs');
-        if($user){
-            $user->delete();
-        }
-       // $this->assertTrue(true);
-       $this->assertEquals(200, $user->getStatusCode());
+        $dog=Dog::factory()->count(2)->create();
+        //$dog=Dog::first();
+        $response=$this->deletejson('/api/dogs/1');
+       
+        $response->assertStatus(200)
+                 ->assertSuccessful()
+                 ->assertJsonCount(1);
+                 
     }
 }
