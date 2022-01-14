@@ -17,8 +17,7 @@ class DogsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class DogsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('dogs');
     }
 }
