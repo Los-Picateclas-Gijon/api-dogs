@@ -11,5 +11,6 @@ class Dog extends Model
     protected $fillable = [
         'name',
         'image',
+        
     ];
 }

@@ -22,3 +22,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/dogs', [DogApiController::class, 'store']);
+Route::delete('/dogs/{id}',[DogApiController::class,'destroy']);
+
+
+// App\Http\Controllers\DogApiController@destroy 
+// [DogApiController::class,'destroy']
+Route::get('/dogs',[DogApiController::class, 'index']);
+Route::put('/dogs/{id}', [DogApiController::class, 'update']);
+

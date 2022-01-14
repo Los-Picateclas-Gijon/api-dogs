@@ -13,6 +13,7 @@ class DogSeeder extends Seeder
      */
     public function run()
     {
-        //
+
+     //\App\Models\Dog::factory(10)->create();
     }
 }
